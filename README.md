@@ -25,16 +25,17 @@ To exhibit the work, please create a desk setup, with either:
 Please open the webpage and when prompted press 'start'. Use the 'analyse' button to assess the news, and click it again to return to normal mode. Use the 'show all' button to see all headlines, and 'single' button to view one.
 
 ## System requirements
-Internet connection, 
+Internet connection, internet browser. 
 
 ## Media
 ### if working: 
-(https://github.com/EvaBashfordHarrison/TheDespondentTimes/blob/main/media/Screenshot%202026-01-22%20at%2012.33.37%201.png)
-(https://github.com/EvaBashfordHarrison/TheDespondentTimes/blob/main/media/Screenshot%202026-01-22%20at%2012.34.06.png)
+<img width="450" height="300" alt="Image" src="https://github.com/user-attachments/assets/9d601ed8-7641-4f79-b2c9-a90e30335b34" /> 
+<img width="450" height="300" alt="Image" src="https://github.com/user-attachments/assets/5a90b8e3-16c8-499c-9fd1-807679f41808" />
 
 ### Exhibition setup: 
-(https://github.com/EvaBashfordHarrison/TheDespondentTimes/blob/main/media/IMG_9010.JPG)
-(https://github.com/EvaBashfordHarrison/TheDespondentTimes/blob/main/media/IMG_9009.JPG)
+<img width="378" height="670" alt="Image" src="https://github.com/user-attachments/assets/642d4481-09dc-47cf-9798-1f040809ccf3" />
+<img width="378" height="670" alt="Image" src="https://github.com/user-attachments/assets/2cb35ab4-756e-4a17-8737-250ec7aea8c8" />
+
 
 ## Credits
 Jonathan Haidt and team: [reference] (https://moralfoundations.org/) 
