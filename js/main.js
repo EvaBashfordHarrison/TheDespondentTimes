@@ -13,8 +13,6 @@ let latestData = "";
 let lastSentCatIndex = null;
 let readBuffer = "";
 
-
-
 // category titles relating to the Moral Foundations theory (Haidt, 2012)
 let mode = "loading"; // Options: 'loading', 'single', 'all'
 
@@ -25,9 +23,8 @@ let CATEGORIES_Titles = ["HARM", "CHEATING", "BETRAYAL", "SUBVERSION", "DEGRADAT
 let shortCats = ["H", "C", "B", "S", "D", "O", "C", "F", "L", "A", "S", "L"];
 let chosenPoints = []; 
 
-// API FEED -- reference: (The Guardian, n.d.)
+// API FEED -- reference: 
 let currentHeadline = ""; // push new 
-const API_URL = "https://content.guardianapis.com/world?api-key=43a329d3-aa5d-44c9-8dc7-5ffb1ecdbd74&page-size=50"; // personal key assigned to Eva Bashford-Harrison, please do not share. 
 
 let headlines = []; // load headlines as list  
 let currentIndex = 0; // starting at the top 
@@ -38,6 +35,7 @@ let wordData; //refers to the json call
 let mWords = []; // mWords = wordData.moralWords.map((c) => c.word); 
 let categories = [];
 let scores = [];
+let newsData; // sample news data for testing without API key
 
 // buttons
 let btnSingle;
@@ -74,6 +72,7 @@ let totalTimer = 60; // 30 seconds per headline
 
 function preload() {
   wordData = loadJSON("wordData.json");  // load JSON data 
+  newsData = loadJSON("newsData.json"); // load sample news data for testing without API key
   mastheadFont = loadFont("assets/engravers-old-english-bt.ttf"); // preload font 
 }
 
@@ -96,7 +95,7 @@ function setup() {
   serial.on('error', gotError);
   serial.on('close', gotClose);
 
-    serial.list(); // <-- only list first, open later
+  serial.list(); // <-- only list first, open later
 
 
   // design global settings  
@@ -115,13 +114,18 @@ function setup() {
   mWords = wordData.moralWords.map((c) => c.word);
   categories = wordData.moralWords.map((c) => c.category);
   scores = wordData.moralWords.map((c) => c.score);
+  currentHeadline = newsData.headlines[0]; // load first headline from sample data
+
+  // load sample headlines from newsData.json for testing without API key
+  headlines = newsData.headlines;
+  analyseData(); // analyse sample data 
 
   // The Guardian API loads here ---  
-  loadJSON(API_URL, (data) => {
-    // API structure is data -> response -> results
-    headlines = data.response.results.map(item => item.webTitle);
-    analyseData(); // analyse 
-  });
+  // loadJSON(API_URL, (data) => {
+  //   // API structure is data -> response -> results
+  //   headlines = data.response.results.map(item => item.webTitle);
+  //   analyseData(); // analyse 
+  // });
   
   headerDesign(); // header elements, masthead, date and time 
   mode = "loading"; // starter screen 
