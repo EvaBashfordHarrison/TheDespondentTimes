@@ -1,0 +1,53 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  /* backgroundColor = color("#0B0E1E")
+  highlightColor = color("#007BFF"); */
+}
+
+.p5-button {
+  font-size: 12px;
+  padding: 8px 14px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+
+  background: #027BFF;
+  color: #0C0E1E;
+
+  cursor: pointer;
+  transition: 
+    background 0.2s ease,
+    color 0.2s ease,
+    border 0.2s ease;
+}
+
+.p5-button:hover {
+  background: #0C0E1E;      /* dark */
+  color:#027BFF;
+
+  border: 1px solid #027BFF;
+}
+
+.p5-button-classic {
+  font-size: 12px;
+  padding: 8px 14px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+
+  background: #000000;
+  color: #c3c5d2;
+
+  cursor: pointer;
+  transition: 
+    background 0.2s ease,
+    color 0.2s ease,
+    border 0.2s ease;
+}
+
+.p5-button-classic:hover {
+  background: #707070;      /* dark */
+  color:#ffffff;
+
+  border: 1px solid #000000;
+}
